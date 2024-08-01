@@ -18,7 +18,7 @@ Servo servo2;
 Servo servo3;
 
 // Define URL and WiFi credentials
-String URL = "http://10.10.26.98/calib/calibration.php";const char* ssid = "SLSU-BC WiFi"; const char* password = ""; 
+String URL = "htthp";const char* ssid = "SLSU-BC WiFi"; const char* password = ""; 
 
 void setup() {
   Serial.begin(115200);
@@ -31,8 +31,8 @@ void setup() {
 
   // Initialize Servos
   servo1.attach(servo1Pin);
-  servo2.attach(servo2Pin);
-  servo3.attach(servo3Pin);
+  servo2.attach(servoPin);
+  servo3.attach(servo3in);
 
   // Initial servo positions
   servo1.write(0);

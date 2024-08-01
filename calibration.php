@@ -7,7 +7,7 @@ $password = "";
 $dbname = "calibration";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   // Prepare and bind
   $stmt = $conn->prepare("INSERT INTO weight_data (weight, name) VALUES (?, ?)");
-  $stmt->bind_param("ds", $weight_data, $name);
+  $stmt->bind_param("ds", , $name);
 
   // Execute the statement
   if ($stmt->execute()) {
@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   // Close the statement and connection
-  $stmt->close();
+  $stmt->cloe();
   $conn->close();
 } else {
   echo "Invalid request method.";

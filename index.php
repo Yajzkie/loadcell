@@ -28,7 +28,7 @@ $result = $conn->query($sql);
 // SQL query to count total records
 $count_sql = "SELECT COUNT(*) AS total FROM weight_data WHERE name IN ('small', 'medium', 'large', 'xl')";
 $count_result = $conn->query($count_sql);
-$row = $count_result->fetch_assoc();
+
 $total_records = $row['total'];
 $total_pages = ceil($total_records / $results_per_page);
 
